@@ -9,5 +9,6 @@ const itemsController = new ItemsController();
 
 routes.get('/items', itemsController.index);
 routes.post('/points', pointsController.CreatePoint);
+routes.get('/points/:id', pointsController.ShowPoint);
 
 export default routes;
