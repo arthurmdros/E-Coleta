@@ -8,6 +8,8 @@ const pointsController = new PointsController();
 const itemsController = new ItemsController();
 
 routes.get('/items', itemsController.index);
+
+routes.get('/points', pointsController.Index);
 routes.post('/points', pointsController.CreatePoint);
 routes.get('/points/:id', pointsController.ShowPoint);
 
