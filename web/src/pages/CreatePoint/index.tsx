@@ -39,6 +39,7 @@ const CreatePoint = () => {
     const [selectedUf, setSelectedUf] = useState('0');
     const [selectedCity, setSelectedCity] = useState('0');
     const [selectedPosition, setSelectedPosition] = useState<[number, number]>([0, 0]);
+    const [selectedItems, setSelectedItems] = useState<number[]>([]);
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(position => {
@@ -98,6 +99,18 @@ const CreatePoint = () => {
 
         setFormData({...formData, [name]: value});
     } 
+
+    function handleSelectedItem(id: number){
+        const alreadySelected = selectedItems.findIndex(item => item === id);
+
+        if(alreadySelected >= 0){
+            const filteredItems = selectedItems.filter(item => item !== id);
+
+            setSelectedItems(filteredItems);
+        }else {
+            setSelectedItems([...selectedItems, id]);
+        }
+    }
 
     return(
         <div id="page-create-point">
@@ -198,7 +211,11 @@ const CreatePoint = () => {
 
                     <ul className="items-grid">
                         {items.map(item => (
-                            <li key={item.id}>
+                            <li 
+                                key={item.id} 
+                                onClick={() => handleSelectedItem(item.id)}
+                                className={selectedItems.includes(item.id) ? 'selected' : ''}
+                            >
                                 <img src={item.image_url} alt={item.title}/>
                                 <span>{item.title}</span>
                             </li> 
