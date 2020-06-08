@@ -56,5 +56,5 @@ display points so people can get in touch and inform the establishment which ite
 
 ####  Link to repository:
 
-  - [Mobile version](https://github.com/arthurmdros/E-Coleta)
+  - [Mobile version](https://github.com/arthurmdros/E-Coleta-App)
   
