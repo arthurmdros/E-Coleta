@@ -15,11 +15,6 @@ display points so people can get in touch and inform the establishment which ite
   - [Node](https://nodejs.org/en/download/)
   + [Yarn](https://classic.yarnpkg.com/pt-BR/docs/install/#windows-stable)
   
-##### To run the mobile version:
-  
-  + Including programs for the web version
-  - [Expo](https://docs.expo.io/versions/v37.0.0/get-started/installation/)
-  
 ## Web version
 
 ### Home page
